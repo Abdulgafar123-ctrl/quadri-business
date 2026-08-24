@@ -1,0 +1,945 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description"
+    content="Explore Glimpaxe Momento Souvenirs services — customized event souvenirs, corporate gifting, gift hampers, personalization, bulk orders and bespoke gift packages.">
+  <meta name="theme-color" content="#ed8200">
+  <title>Services | Glimpaxe Momento Souvenirs</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* SERVICE PAGE ENHANCEMENT — works with the existing Glimpaxe stylesheet */
+    .service-hero {
+      padding: 90px 0 75px;
+      background:
+        radial-gradient(circle at 90% 15%, rgba(237, 130, 0, .18), transparent 28%),
+        linear-gradient(125deg, #fff, #fff5e6);
+      overflow: hidden
+    }
+
+    .service-hero-grid {
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      gap: 55px;
+      align-items: center
+    }
+
+    .service-hero h1 {
+      font: 800 clamp(42px, 6vw, 72px)/1.02 Georgia, serif;
+      letter-spacing: -2px;
+      margin: 12px 0 20px
+    }
+
+    .service-hero h1 span {
+      color: #ed8200
+    }
+
+    .service-hero-copy {
+      font-size: 18px;
+      color: #626262;
+      max-width: 690px
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 28px
+    }
+
+    .service-hero-card {
+      position: relative
+    }
+
+    .service-hero-card img {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+      border-radius: 28px;
+      box-shadow: 0 28px 70px rgba(23, 23, 23, .16)
+    }
+
+    .hero-badge {
+      position: absolute;
+      left: -20px;
+      bottom: 25px;
+      background: #171717;
+      color: #fff;
+      padding: 18px 20px;
+      border-radius: 18px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, .18);
+      max-width: 230px
+    }
+
+    .hero-badge strong {
+      display: block;
+      color: #ffb34e;
+      font: 800 25px Georgia, serif
+    }
+
+    .hero-badge span {
+      font-size: 13px;
+      color: #ddd
+    }
+
+    .intro {
+      text-align: center;
+      max-width: 850px;
+      margin: 0 auto 45px
+    }
+
+    .intro h2,
+    .service-section-title {
+      font: 800 clamp(34px, 5vw, 56px)/1.08 Georgia, serif;
+      margin: 10px 0 15px
+    }
+
+    .intro p {
+      color: #666;
+      font-size: 17px
+    }
+
+    .service-showcase {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px
+    }
+
+    .service-card {
+      position: relative;
+      background: #fff;
+      border: 1px solid #e8e2d9;
+      border-radius: 24px;
+      padding: 31px;
+      min-height: 290px;
+      transition: .35s;
+      overflow: hidden
+    }
+
+    .service-card:after {
+      content: "";
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: #fff1dc;
+      right: -55px;
+      bottom: -55px;
+      z-index: 0
+    }
+
+    .service-card>* {
+      position: relative;
+      z-index: 1
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 24px 60px rgba(23, 23, 23, .11)
+    }
+
+    .service-number {
+      font: 800 32px Georgia, serif;
+      color: #ed8200
+    }
+
+    .service-card h3 {
+      font-size: 24px;
+      margin: 15px 0 10px
+    }
+
+    .service-card p {
+      color: #666
+    }
+
+    .service-link {
+      font-weight: 800;
+      color: #b85f00;
+      display: inline-block;
+      margin-top: 12px
+    }
+
+    .audience {
+      background: #fff8ef
+    }
+
+    .audience-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px
+    }
+
+    .audience-card {
+      padding: 32px;
+      border-radius: 24px;
+      background: #fff;
+      border: 1px solid #eadfce
+    }
+
+    .audience-card h3 {
+      font: 800 28px Georgia, serif;
+      margin: 10px 0
+    }
+
+    .audience-card p {
+      color: #666
+    }
+
+    .audience-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 20px
+    }
+
+    .audience-list span {
+      padding: 10px 13px;
+      background: #fff8ef;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 13px
+    }
+
+    .workflow {
+      background: #171717;
+      color: #fff
+    }
+
+    .workflow .intro p {
+      color: #bbb
+    }
+
+    .workflow-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 15px
+    }
+
+    .workflow-step {
+      border-top: 2px solid #ed8200;
+      padding: 20px 4px 0
+    }
+
+    .workflow-step b {
+      font: 800 32px Georgia, serif;
+      color: #ed8200
+    }
+
+    .workflow-step h3 {
+      margin: 10px 0 7px
+    }
+
+    .workflow-step p {
+      color: #bbb;
+      font-size: 14px
+    }
+
+    .package-section {
+      background: #fff
+    }
+
+    .package-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px
+    }
+
+    .package {
+      border: 1px solid #e7e0d7;
+      border-radius: 25px;
+      padding: 32px;
+      background: #fff;
+      position: relative;
+      transition: .35s
+    }
+
+    .package:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 24px 60px rgba(23, 23, 23, .10)
+    }
+
+    .package.featured {
+      border: 2px solid #ed8200
+    }
+
+    .package-label {
+      display: inline-block;
+      background: #fff0da;
+      color: #a75b00;
+      border-radius: 30px;
+      padding: 6px 11px;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      text-transform: uppercase
+    }
+
+    .package h3 {
+      font: 800 31px Georgia, serif;
+      margin: 15px 0 5px
+    }
+
+    .package>p {
+      color: #666
+    }
+
+    .package ul {
+      padding: 0;
+      list-style: none;
+      margin: 22px 0
+    }
+
+    .package li {
+      padding: 9px 0 9px 25px;
+      position: relative;
+      color: #555
+    }
+
+    .package li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #ed8200;
+      font-weight: 900
+    }
+
+    .package .btn {
+      margin-top: 5px
+    }
+
+    .custom-section {
+      background: linear-gradient(115deg, #fff5e6, #fff)
+    }
+
+    .custom-grid {
+      display: grid;
+      grid-template-columns: 1fr .9fr;
+      gap: 50px;
+      align-items: center
+    }
+
+    .custom-copy p {
+      color: #666;
+      font-size: 17px
+    }
+
+    .checks {
+      list-style: none;
+      padding: 0
+    }
+
+    .checks li {
+      padding: 12px 0 12px 30px;
+      position: relative;
+      border-bottom: 1px solid #eee
+    }
+
+    .checks li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #ed8200;
+      font-weight: 900
+    }
+
+    .brief-card {
+      background: #171717;
+      color: #fff;
+      border-radius: 28px;
+      padding: 35px;
+      box-shadow: 0 25px 65px rgba(23, 23, 23, .15)
+    }
+
+    .brief-card h3 {
+      font: 800 32px Georgia, serif;
+      margin-top: 0
+    }
+
+    .brief-card p {
+      color: #bbb
+    }
+
+    .brief-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px
+    }
+
+    .brief-row div {
+      background: #242424;
+      border-radius: 13px;
+      padding: 15px
+    }
+
+    .brief-row b {
+      display: block;
+      color: #ffb34e;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px
+    }
+
+    .brief-row span {
+      font-size: 14px
+    }
+
+    .service-faq {
+      background: #fff8ef
+    }
+
+    .service-faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px
+    }
+
+    .service-faq details {
+      background: #fff;
+      border: 1px solid #eadfce;
+      border-radius: 16px;
+      padding: 18px 20px
+    }
+
+    .service-faq summary {
+      font-weight: 800;
+      cursor: pointer
+    }
+
+    .service-faq details p {
+      color: #666
+    }
+
+    .final-cta {
+      background: #171717;
+      color: #fff;
+      text-align: center;
+      padding: 90px 0;
+      position: relative;
+      overflow: hidden
+    }
+
+    .final-cta:before {
+      content: "";
+      position: absolute;
+      width: 340px;
+      height: 340px;
+      border: 1px solid rgba(237, 130, 0, .3);
+      border-radius: 50%;
+      left: -130px;
+      top: -140px
+    }
+
+    .final-cta h2 {
+      font: 800 clamp(38px, 5vw, 60px)/1.05 Georgia, serif;
+      max-width: 800px;
+      margin: 10px auto 15px
+    }
+
+    .final-cta p {
+      color: #bbb;
+      max-width: 680px;
+      margin: 0 auto 28px;
+      font-size: 17px
+    }
+
+    .final-cta .btn {
+      margin: 5px
+    }
+
+    @media(max-width:950px) {
+
+      .service-hero-grid,
+      .custom-grid {
+        grid-template-columns: 1fr
+      }
+
+      .service-hero-card img {
+        height: 430px
+      }
+
+      .service-showcase,
+      .package-grid {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .workflow-grid {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .audience-grid,
+      .service-faq-grid {
+        grid-template-columns: 1fr
+      }
+    }
+
+    @media(max-width:650px) {
+      .service-hero {
+        padding: 55px 0
+      }
+
+      .service-hero h1 {
+        letter-spacing: -1px
+      }
+
+      .service-hero-card img {
+        height: 350px
+      }
+
+      .hero-badge {
+        left: 12px;
+        bottom: 15px
+      }
+
+      .service-showcase,
+      .package-grid,
+      .workflow-grid {
+        grid-template-columns: 1fr
+      }
+
+      .audience-list,
+      .brief-row {
+        grid-template-columns: 1fr
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="wrap nav">
+      <img class="logo" src="assets/logo.png" alt="Glimpaxe Momento Souvenirs logo"></a>
+      <button class="menu" aria-label="Open menu">☰</button>
+      <nav class="links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a class="active" href="services.html">Services</a>
+        <a href="products.html">Products</a>
+        <a href="portfolio.html">Our Work</a>
+        <a href="corporate.html">Corporate</a>
+        <a href="faq.html">FAQs</a>
+        <a class="cta" href="contact.html">Get a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="service-hero reveal">
+      <div class="wrap service-hero-grid">
+        <div>
+          <span class="eyebrow">Our Services</span>
+          <h1>Thoughtful gifting, <span>beautifully made.</span></h1>
+          <p class="service-hero-copy">
+            At Glimpaxe Momento Souvenirs, we do more than supply souvenirs.
+            We help you turn an occasion, relationship, celebration or business
+            milestone into something people can remember, keep and appreciate.
+          </p>
+          <p class="service-hero-copy">
+            From a simple customized keepsake to a carefully planned bulk order,
+            our service is built around your event, audience, style, quantity and budget.
+          </p>
+          <div class="hero-actions">
+            <a class="btn" href="contact.html">Request a Custom Quote →</a>
+            <a class="btn dark-btn" href="products.html">Explore Products</a>
+          </div>
+        </div>
+
+        <div class="service-hero-card">
+          <img src="assets/corporate-showcase.png" alt="Customized Glimpaxe Momento souvenir arrangement" loading="eager">
+          <div class="hero-badge">
+            <strong>Make it memorable.</strong>
+            <span>We turn thoughtful ideas into customized keepsakes and gift experiences.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <div class="wrap">
+        <div class="intro">
+          <span class="eyebrow">More than a product</span>
+          <h2>We help you create the right gifting experience.</h2>
+          <p>
+            You do not have to know exactly what to order before you contact us.
+            Tell us what you are celebrating, who the gifts are for, how many you need
+            and the kind of experience you want to create. We help you turn that brief
+            into a practical, attractive and personalized package.
+          </p>
+        </div>
+
+        <div class="service-showcase">
+
+          <article class="service-card">
+            <span class="service-number">01</span>
+            <h3>Customized Event Souvenirs</h3>
+            <p>
+              Create memorable keepsakes for weddings, birthdays, anniversaries,
+              naming ceremonies, bridal events, graduations and other celebrations.
+              We help you select items and personalize them around your theme.
+            </p>
+            <a class="service-link" href="products.html">Explore souvenir options →</a>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">02</span>
+            <h3>Corporate & Branded Gifting</h3>
+            <p>
+              Give your clients, employees, partners and guests something that feels
+              intentional. We create branded gift solutions for conferences,
+              appreciation campaigns, launches, milestones and corporate occasions.
+            </p>
+            <a class="service-link" href="corporate.html">Explore corporate gifting →</a>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">03</span>
+            <h3>Curated Gift Hampers</h3>
+            <p>
+              Combine multiple useful and beautiful items into one coordinated gift.
+              Hampers can be shaped around the recipient, occasion, colour direction,
+              message and budget.
+            </p>
+            <a class="service-link" href="contact.html">Build a hamper →</a>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">04</span>
+            <h3>Personalization & Branding</h3>
+            <p>
+              Add names, logos, messages, colours, themes and event details to selected
+              products so the final result feels personal to the recipient or aligned
+              with your brand identity.
+            </p>
+            <a class="service-link" href="contact.html">Discuss personalization →</a>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">05</span>
+            <h3>Bulk & Large Event Orders</h3>
+            <p>
+              Planning for a large guest list? We help organize product selections,
+              quantities, specifications and customization details so your order
+              remains consistent and manageable.
+            </p>
+            <a class="service-link" href="contact.html">Plan your bulk order →</a>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">06</span>
+            <h3>Bespoke Custom Packages</h3>
+            <p>
+              Have an idea that does not fit a standard package? Tell us the outcome
+              you want and your budget. We can help structure a custom combination
+              around your requirements.
+            </p>
+            <a class="service-link" href="contact.html">Start with your idea →</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="audience reveal">
+      <div class="wrap">
+        <div class="intro">
+          <span class="eyebrow">Who we serve</span>
+          <h2>Whatever the occasion, there is a thoughtful way to gift.</h2>
+          <p>
+            Our services are designed for people and organizations who want their
+            gifts to feel intentional rather than ordinary.
+          </p>
+        </div>
+
+        <div class="audience-grid">
+          <article class="audience-card">
+            <span class="eyebrow">Personal celebrations</span>
+            <h3>For moments worth remembering.</h3>
+            <p>
+              Create keepsakes that carry the feeling of your occasion beyond the day itself.
+              We can help you select practical, beautiful and personalized items for your guests.
+            </p>
+            <div class="audience-list">
+              <span>Weddings</span>
+              <span>Birthdays</span>
+              <span>Anniversaries</span>
+              <span>Naming Ceremonies</span>
+              <span>Graduations</span>
+              <span>Bridal Events</span>
+            </div>
+          </article>
+
+          <article class="audience-card">
+            <span class="eyebrow">Business & organizations</span>
+            <h3>For brands that want to be remembered.</h3>
+            <p>
+              Turn appreciation, recognition and business milestones into tangible experiences
+              that strengthen relationships with the people who matter to your organization.
+            </p>
+            <div class="audience-list">
+              <span>Client Gifts</span>
+              <span>Staff Appreciation</span>
+              <span>Conferences</span>
+              <span>Product Launches</span>
+              <span>Corporate Events</span>
+              <span>Brand Campaigns</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="workflow reveal">
+      <div class="wrap">
+        <div class="intro">
+          <span class="eyebrow">Our process</span>
+          <h2>From your first idea to the finished package.</h2>
+          <p>
+            We keep the process simple, collaborative and focused on getting you
+            from “I need souvenirs” to a clear, confident decision.
+          </p>
+        </div>
+
+        <div class="workflow-grid">
+          <div class="workflow-step">
+            <b>01</b>
+            <h3>Tell us</h3>
+            <p>Share your event, audience, quantity, preferred items, budget and any ideas you already have.</p>
+          </div>
+          <div class="workflow-step">
+            <b>02</b>
+            <h3>We understand</h3>
+            <p>We clarify the details that matter and identify what will work best for your occasion.</p>
+          </div>
+          <div class="workflow-step">
+            <b>03</b>
+            <h3>We recommend</h3>
+            <p>We suggest suitable products, combinations and customization directions based on your brief.</p>
+          </div>
+          <div class="workflow-step">
+            <b>04</b>
+            <h3>We customize</h3>
+            <p>Your names, logos, messages, colours and themes are incorporated into the selected items.</p>
+          </div>
+          <div class="workflow-step">
+            <b>05</b>
+            <h3>We prepare</h3>
+            <p>After confirmation, your order moves through production and preparation toward delivery.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="package-section reveal">
+      <div class="wrap">
+        <div class="intro">
+          <span class="eyebrow">Choose your direction</span>
+          <h2>Start simple, go premium, or build something completely custom.</h2>
+          <p>
+            Every event is different, so your final quotation is based on your selected
+            products, quantity, customization and requirements.
+          </p>
+        </div>
+
+        <div class="package-grid">
+          <article class="package">
+            <span class="package-label">Simple & practical</span>
+            <h3>Basic</h3>
+            <p>Ideal for customers who want thoughtful customized souvenirs without unnecessary complexity.</p>
+            <ul>
+              <li>Suitable for smaller celebrations</li>
+              <li>Selected souvenir options</li>
+              <li>Basic personalization</li>
+              <li>Built around your quantity</li>
+              <li>Quote based on your requirements</li>
+            </ul>
+            <a class="btn" href="contact.html">Ask for a Quote</a>
+          </article>
+
+          <article class="package featured">
+            <span class="package-label">Popular direction</span>
+            <h3>Premium</h3>
+            <p>For customers who want a more coordinated, elevated gifting experience with greater flexibility.</p>
+            <ul>
+              <li>More product combinations</li>
+              <li>Enhanced personalization</li>
+              <li>Coordinated event styling</li>
+              <li>Suitable for bulk orders</li>
+              <li>10% bulk-order consideration where applicable</li>
+            </ul>
+            <a class="btn" href="contact.html">Build My Package</a>
+          </article>
+
+          <article class="package">
+            <span class="package-label">Fully bespoke</span>
+            <h3>Luxury</h3>
+            <p>A custom experience for clients who want distinctive presentation and a highly tailored package.</p>
+            <ul>
+              <li>Custom product combinations</li>
+              <li>Premium presentation direction</li>
+              <li>Advanced personalization</li>
+              <li>Event-specific creative direction</li>
+              <li>Custom quotation</li>
+            </ul>
+            <a class="btn" href="contact.html">Discuss My Idea</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="custom-section reveal">
+      <div class="wrap custom-grid">
+        <div class="custom-copy">
+          <span class="eyebrow">Need something different?</span>
+          <h2 class="service-section-title">Your idea does not have to fit inside a box.</h2>
+          <p>
+            Maybe you already have a product in mind. Maybe you have seen a gift set
+            you love. Or maybe all you know is that you want your guests, clients or
+            loved ones to leave with something meaningful.
+          </p>
+          <p>
+            That is enough to start. We can work with your direction and help shape
+            the details into a realistic package.
+          </p>
+          <ul class="checks">
+            <li>Tell us the occasion and number of recipients</li>
+            <li>Share your preferred style, colours or theme</li>
+            <li>Give us your product ideas, if you have them</li>
+            <li>Tell us your budget range</li>
+            <li>Let us know your personalization requirements</li>
+          </ul>
+        </div>
+
+        <div class="brief-card">
+          <h3>A simple brief is enough.</h3>
+          <p>
+            You can start your conversation with something as simple as:
+            “I need 100 wedding souvenirs, I want them in black and gold, and my
+            budget is around ₦150,000.”
+          </p>
+          <div class="brief-row">
+            <div><b>Event</b><span>Wedding</span></div>
+            <div><b>Quantity</b><span>100 pieces</span></div>
+            <div><b>Style</b><span>Black & gold</span></div>
+            <div><b>Budget</b><span>₦150,000</span></div>
+          </div>
+          <br>
+          <a class="btn"
+            href="https://wa.me/2348135200799?text=Hello%20Glimpaxe%20Momento%2C%20I%20would%20like%20help%20creating%20a%20custom%20package."
+            target="_blank" rel="noopener">Start on WhatsApp →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="service-faq reveal">
+      <div class="wrap">
+        <div class="intro">
+          <span class="eyebrow">Before you enquire</span>
+          <h2>Questions people often ask about our services.</h2>
+        </div>
+
+        <div class="service-faq-grid">
+          <details>
+            <summary>Can I request a combination of different products?</summary>
+            <p>Yes. We can help you combine suitable products into a coordinated souvenir or gift package based on your
+              event and budget.</p>
+          </details>
+          <details>
+            <summary>Can you customize products with names or logos?</summary>
+            <p>Yes. Personalization can include names, messages, logos, colours, themes and other relevant event or
+              brand details, depending on the product.</p>
+          </details>
+          <details>
+            <summary>Do you handle large quantities?</summary>
+            <p>Yes. Bulk and event orders are part of our service. Tell us your approximate quantity early so we can
+              plan the recommendation appropriately.</p>
+          </details>
+          <details>
+            <summary>What if I don't know what product to choose?</summary>
+            <p>That is completely fine. Tell us the event, audience, quantity and budget and we can recommend suitable
+              directions for you to consider.</p>
+          </details>
+          <details>
+            <summary>Can businesses order branded gifts?</summary>
+            <p>Yes. We support corporate gifting for clients, employees, partners, conferences, appreciation campaigns
+              and other business occasions.</p>
+          </details>
+          <details>
+            <summary>How do I get a quotation?</summary>
+            <p>Use the Get a Quote page or message us directly on WhatsApp with your event details. We can then discuss
+              the right options and requirements.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta reveal">
+      <div class="wrap">
+        <span class="eyebrow">Let's create something memorable</span>
+        <h2>Your occasion deserves more than an ordinary gift.</h2>
+        <p>
+          Tell us what you are planning, who you are gifting and what you have in mind.
+          We'll help you turn the idea into a customized souvenir or gift package.
+        </p>
+        <a class="btn" href="contact.html">Request a Custom Quote →</a>
+        <a class="btn dark-btn"
+          href="https://wa.me/2348135200799?text=Hello%20Glimpaxe%20Momento%2C%20I%20would%20like%20to%20make%20an%20enquiry."
+          target="_blank" rel="noopener">Chat on WhatsApp</a>
+      </div>
+    </section>
+
+  </main>
+
+  <section class="social">
+    <div class="wrap socialrow">
+      <div>
+        <span class="eyebrow">Stay connected</span>
+        <h2>Follow Glimpaxe Momentos.</h2>
+      </div>
+      <div class="socials">
+        <a href="https://wa.me/2348135200799" target="_blank" rel="noopener">WA</a>
+        <a href="https://www.instagram.com/glimpaxemomento_souvenir" target="_blank" rel="noopener">IG</a>
+        <a href="https://www.tiktok.com/@glimpaxemomento_souvenir" target="_blank" rel="noopener">TT</a>
+        <a href="https://www.facebook.com/profile.php?id=61579740960223" target="_blank" rel="noopener">FB</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap foot">
+      <div>
+        <img class="logo" src="assets/logo.png" alt="Glimpaxe Momento Souvenirs logo">
+        <p>Powerful glimpse into memorable moments through lasting souvenirs.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="products.html">Products</a>
+      </div>
+      <div>
+        <h4>Discover</h4>
+        <a href="portfolio.html">Our Work</a>
+        <a href="corporate.html">Corporate</a>
+        <a href="faq.html">FAQs</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="contact.html">Get a Quote</a>
+        <a href="https://wa.me/2348135200799">WhatsApp</a>
+      </div>
+    </div>
+    <div class="wrap copyright">glimpaxemomentos1@gmail.com</div>
+    <div class="wrap copyright">© 2026 Glimpaxe Momento Souvenirs. All rights reserved.</div>
+  </footer>
+
+  <a class="float" href="https://wa.me/2348135200799" target="_blank" rel="noopener">WhatsApp</a>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
