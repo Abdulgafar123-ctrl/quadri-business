@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://glimpaxemomento1.netlify.app/sitemap.xml
