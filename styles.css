@@ -18,6 +18,231 @@ a {
     width: min(1150px, 92%);
     margin: auto
 }
+/* ================================
+   GET A QUOTE BUTTON
+   ================================ */
+
+.links a.get-quote {
+    width: 130px;
+    height: 40px;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    padding: 0 !important;
+    margin-left: 10px;
+
+    text-align: center !important;
+    white-space: nowrap;
+
+    font-size: 14px !important;
+    line-height: 1 !important;
+
+    color: #111 !important;
+    background: #fff !important;
+
+    border: 2px solid #d4a017 !important;
+    border-radius: 50px;
+
+    box-sizing: border-box;
+}
+
+.links a.get-quote {
+    position: relative;
+    display: inline-block;
+
+    padding: 18px 40px;
+    margin-left: 15px;
+
+    color: #ffffff !important;
+    background:   #d4a017 !important;
+
+    border: 2px solid  #d4a017 !important;
+    border-radius: 50px;
+
+    text-decoration: none !important;
+    font-size: 16px;
+    font-weight: 700;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 0 #d4a017;
+
+    transition:
+        background 0.3s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* ================================
+   HOVER EFFECT
+   ================================ */
+
+.links a.get-quote:hover {
+    color: #ffffff !important;
+    background: #d4a117 !important;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 15px rgba(209, 177, 22, 0.833);
+}
+
+
+/* ================================
+   CLICK / PRESS EFFECT
+   ================================ */
+
+.links a.get-quote:active {
+    transform: translateY(2px);
+
+    box-shadow: 0 2px 0 #d4a017;
+}
+
+
+/* ================================
+   SHINE ANIMATION
+   ================================ */
+
+.links a.get-quote::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: -100%;
+
+    width: 60%;
+    height: 100%;
+
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.35),
+        transparent
+    );
+
+    transform: skewX(-20deg);
+
+    transition: left 0.6s ease;
+}
+/* ================================
+   GLIMPAXE NAVIGATION BAR
+   ================================ */
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+}
+
+
+/* ================================
+   NORMAL NAVIGATION LINKS
+   ================================ */
+
+.links a:not(.get-quote) {
+    position: relative;
+    display: inline-block;
+    padding: 10px 16px;
+    color: #111;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+
+/* Hover effect - NORMAL LINKS ONLY */
+
+.links a:not(.get-quote):hover {
+    color: #d4a017;
+    background: rgba(212, 160, 23, 0.08);
+}
+
+
+/* Animated underline - NORMAL LINKS ONLY */
+
+.links a:not(.get-quote)::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 4px;
+    width: 0;
+    height: 2px;
+    background: #d4a017;
+    border-radius: 10px;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+
+/* Underline when hovering */
+
+.links a:not(.get-quote):hover::after {
+    width: 60%;
+}
+
+
+/* ================================
+   ACTIVE PAGE - NORMAL LINKS ONLY
+   ================================ */
+
+.links a:not(.get-quote).active {
+    color: #d4a017;
+    background: rgba(212, 160, 23, 0.08);
+}
+
+
+/* Active underline */
+
+.links a:not(.get-quote).active::after {
+    width: 60%;
+}
+
+
+/* ================================
+   GET A QUOTE
+   ================================ */
+
+/* Prevent the navigation CSS from affecting it */
+
+.links a.get-quote {
+    position: static;
+    padding: initial;
+    background: none;
+    color: initial;
+    text-decoration: none;
+}
+
+/* Make sure the navigation hover doesn't affect it */
+
+.links a.get-quote:hover {
+    background: none;
+    color: initial;
+}
+
+/* Remove the navigation underline completely */
+
+.links a.get-quote::after {
+    content: none;
+}
+
+/* Shine when hovering */
+
+.links a.get-quote:hover::before {
+    left: 140%;
+}
+
+
+/* Remove navigation underline */
+
+.links a.get-quote::after {
+    content: none !important;
+    display: none !important;
+}
 
 header {
     position: sticky;
