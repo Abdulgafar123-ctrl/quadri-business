@@ -13,6 +13,9 @@ a {
     text-decoration: none;
     color: inherit
 }
+Span {
+    color: #ed8200;
+}
 
 .wrap {
     width: min(1150px, 92%);
