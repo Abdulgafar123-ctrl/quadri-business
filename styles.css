@@ -279,14 +279,22 @@ header {
     font-size: 14px
 }
 
-.cta,
-.btn {
-    background: #ed8200;
-    color: #fff;
+.btn-primary {
+    background: #f28c00 !important;
+    color: #fff !important
+}
+
+.btn-primary {
+    padding: 12px 19px;
+    border-radius: 28px
+}
+
+.btn-outline {
+    background: #292929;
+    color:white;
     padding: 12px 19px;
     border-radius: 28px;
-    font-weight: bold;
-    display: inline-block
+
 }
 
 .menu {
