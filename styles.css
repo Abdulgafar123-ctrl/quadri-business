@@ -285,15 +285,15 @@ header {
 }
 
 .btn-primary {
-    padding: 12px 19px;
-    border-radius: 28px
+    padding: 10px 16px;
+    border-radius: 25px
 }
 
 .btn-outline {
     background: #292929;
     color:white;
-    padding: 12px 19px;
-    border-radius: 28px;
+    padding: 10px 16px;
+    border-radius: 25px;
 
 }
 
