@@ -402,6 +402,566 @@ section {
 .product p {
     color: #666
 }
+/* ================================
+   TESTIMONIALS SECTION
+================================ */
+
+.testimonials {
+  padding: 90px 7%;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Header */
+
+.testimonials-header {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 55px;
+}
+
+.section-tag {
+  display: inline-block;
+  background: #f5c400;
+  color: #111;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  padding: 8px 16px;
+  border-radius: 30px;
+  margin-bottom: 15px;
+}
+
+.testimonials-header h2 {
+  font-size: 42px;
+  line-height: 1.2;
+  color: #111;
+  margin: 0 0 15px;
+  font-weight: 800;
+}
+
+.testimonials-header p {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+
+/* Testimonial Cards Container */
+
+.testimonial-container {
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+
+/* Individual Card */
+
+.testimonial-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 18px;
+  padding: 28px;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+  border-color: #f5c400;
+}
+
+
+/* Customer Information */
+
+.customer-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+
+/* Small Round Customer Image */
+
+.customer-image {
+  width: 58px;
+  height: 58px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  border: 3px solid #f5c400;
+
+  background: #f5f5f5;
+}
+
+
+.customer-info h3 {
+  margin: 0 0 4px;
+
+  font-size: 17px;
+  font-weight: 700;
+
+  color: #111;
+}
+
+.customer-info span {
+  font-size: 13px;
+  color: #777;
+}
+
+
+/* Stars */
+
+.stars {
+  color: #f5c400;
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin: 20px 0 14px;
+}
+
+
+/* Testimonial */
+
+.testimonial-text {
+  color: #555;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+
+  margin: 0 0 20px;
+
+  font-style: italic;
+}
+
+
+/* Optional Event Photo */
+
+.event-photo {
+  width: 100%;
+  height: 180px;
+
+  object-fit: cover;
+
+  border-radius: 12px;
+
+  margin-top: 5px;
+
+  display: block;
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 900px) {
+
+  .testimonial-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonials-header h2 {
+    font-size: 36px;
+  }
+
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+
+  .testimonials {
+    padding: 65px 5%;
+  }
+
+  .testimonials-header {
+    margin-bottom: 40px;
+  }
+
+  .testimonials-header h2 {
+    font-size: 30px;
+  }
+
+  .testimonials-header p {
+    font-size: 14px;
+  }
+
+  .testimonial-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .testimonial-card {
+    padding: 22px;
+  }
+
+  .customer-image {
+    width: 52px;
+    height: 52px;
+  }
+
+  .event-photo {
+    height: 200px;
+  }
+
+}
+/* =================================
+   BLOG SECTION
+================================= */
+
+.blog-section {
+  padding: 90px 7%;
+  background: #f8f8f8;
+}
+
+
+/* =================================
+   BLOG HEADER
+================================= */
+
+.blog-header {
+  max-width: 750px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.blog-tag {
+  display: inline-block;
+
+  background: #f5c400;
+  color: #111;
+
+  padding: 8px 17px;
+
+  border-radius: 30px;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 15px;
+}
+
+.blog-header h2 {
+  margin: 0 0 15px;
+
+  color: #111;
+
+  font-size: 42px;
+
+  line-height: 1.2;
+
+  font-weight: 800;
+}
+
+.blog-header p {
+  margin: 0;
+
+  color: #666;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+
+/* =================================
+   BLOG CONTAINER
+================================= */
+
+.blog-container {
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 22px;
+}
+
+
+/* =================================
+   BLOG CARD
+================================= */
+
+.blog-card {
+  background: #fff;
+
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  border: 1px solid #eee;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+
+  transition: all 0.3s ease;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+.blog-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+
+  border-color: #f5c400;
+}
+
+
+/* =================================
+   BLOG IMAGE
+================================= */
+
+.blog-image {
+  width: 100%;
+
+  height: 210px;
+
+  overflow: hidden;
+}
+
+.blog-image img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition: transform 0.5s ease;
+}
+
+.blog-card:hover .blog-image img {
+  transform: scale(1.07);
+}
+
+
+/* =================================
+   BLOG CONTENT
+================================= */
+
+.blog-content {
+  padding: 24px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  flex: 1;
+}
+
+
+/* Category */
+
+.blog-category {
+  display: inline-block;
+
+  color: #a27f00;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.2px;
+
+  margin-bottom: 10px;
+}
+
+
+/* Blog Title */
+
+.blog-content h3 {
+  margin: 0 0 12px;
+
+  color: #111;
+
+  font-size: 19px;
+
+  line-height: 1.4;
+
+  font-weight: 750;
+}
+
+
+/* Blog Description */
+
+.blog-content p {
+  color: #666;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+
+  margin: 0 0 20px;
+}
+
+
+/* =================================
+   READ MORE BUTTON
+================================= */
+
+.read-more {
+  margin-top: auto;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  width: fit-content;
+
+  color: #111;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  transition: all 0.3s ease;
+}
+
+.read-more span {
+  color: #d9aa00;
+
+  font-size: 18px;
+
+  transition: transform 0.3s ease;
+}
+
+.read-more:hover {
+  color: #d9aa00;
+}
+
+.read-more:hover span {
+  transform: translateX(5px);
+}
+
+
+/* =================================
+   VIEW ALL BUTTON
+================================= */
+
+.blog-button-container {
+  text-align: center;
+
+  margin-top: 50px;
+}
+
+.view-all-blogs {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  background: #111;
+
+  color: #fff;
+
+  padding: 14px 25px;
+
+  border-radius: 30px;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  transition: all 0.3s ease;
+}
+
+.view-all-blogs span {
+  font-size: 18px;
+
+  transition: transform 0.3s ease;
+}
+
+.view-all-blogs:hover {
+  background: #f5c400;
+
+  color: #111;
+}
+
+.view-all-blogs:hover span {
+  transform: translateX(5px);
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 1100px) {
+
+  .blog-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 600px) {
+
+  .blog-section {
+    padding: 65px 5%;
+  }
+
+  .blog-header {
+    margin-bottom: 40px;
+  }
+
+  .blog-header h2 {
+    font-size: 30px;
+  }
+
+  .blog-header p {
+    font-size: 14px;
+  }
+
+  .blog-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .blog-image {
+    height: 220px;
+  }
+
+  .blog-content {
+    padding: 22px;
+  }
+
+}
+
 /* Founder Section */
 .founder-section {
     padding: 70px 0;
@@ -1050,6 +1610,11 @@ section>.wrap {
     color: #686868
 }
 
+.about_timeline{
+    font: 300 24px Georgia;
+    color: var(--gm-gold)
+
+}
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -1546,4 +2111,18 @@ section>.wrap {
         animation: none !important;
         transition: none !important
     }
+}
+.lead_Quote {
+    color:#d4a017;
+}
+.event_title{
+    background-color: #bd6700;;
+}
+.event_title_black{
+    color: #111;
+}
+.req{
+    font-size:smaller;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
 }

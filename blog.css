@@ -1,0 +1,760 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #171717;
+    line-height: 1.6
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+Span {
+    color: #ed8200;
+}
+.wrap {
+  width: min(1150px, 92%);
+  margin: auto;
+}
+/* ================================
+   GET A QUOTE BUTTON
+   ================================ */
+
+.links a.get-quote {
+    width: 130px;
+    height: 40px;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    padding: 0 !important;
+    margin-left: 10px;
+
+    text-align: center !important;
+    white-space: nowrap;
+
+    font-size: 14px !important;
+    line-height: 1 !important;
+
+    color: #111 !important;
+    background: #fff !important;
+
+    border: 2px solid #d4a017 !important;
+    border-radius: 50px;
+
+    box-sizing: border-box;
+}
+
+.links a.get-quote {
+    position: relative;
+    display: inline-block;
+
+    padding: 18px 40px;
+    margin-left: 15px;
+
+    color: #ffffff !important;
+    background:   #d4a017 !important;
+
+    border: 2px solid  #d4a017 !important;
+    border-radius: 50px;
+
+    text-decoration: none !important;
+    font-size: 16px;
+    font-weight: 700;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 0 #d4a017;
+
+    transition:
+        background 0.3s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* ================================
+   HOVER EFFECT
+   ================================ */
+
+.links a.get-quote:hover {
+    color: #ffffff !important;
+    background: #d4a117 !important;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 15px rgba(209, 177, 22, 0.833);
+}
+
+
+/* ================================
+   CLICK / PRESS EFFECT
+   ================================ */
+.links a.get-quote:active {
+    transform: translateY(2px);
+
+    box-shadow: 0 2px 0 #d4a017;
+}
+
+
+/* ================================
+   SHINE ANIMATION
+   ================================ */
+
+.links a.get-quote::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: -100%;
+
+    width: 60%;
+    height: 100%;
+
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.35),
+        transparent
+    );
+
+    transform: skewX(-20deg);
+
+    transition: left 0.6s ease;
+}
+/* ================================
+   GLIMPAXE NAVIGATION BAR
+   ================================ */
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+}
+
+
+/* ================================
+   NORMAL NAVIGATION LINKS
+   ================================ */
+
+.links a:not(.get-quote) {
+    position: relative;
+    display: inline-block;
+    padding: 10px 16px;
+    color: #111;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+
+/* Hover effect - NORMAL LINKS ONLY */
+
+.links a:not(.get-quote):hover {
+    color: #d4a017;
+    background: rgba(212, 160, 23, 0.08);
+}
+
+
+/* Animated underline - NORMAL LINKS ONLY */
+
+.links a:not(.get-quote)::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 4px;
+    width: 0;
+    height: 2px;
+    background: #d4a017;
+    border-radius: 10px;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+
+/* Underline when hovering */
+
+.links a:not(.get-quote):hover::after {
+    width: 60%;
+}
+
+
+/* ================================
+   ACTIVE PAGE - NORMAL LINKS ONLY
+   ================================ */
+
+.links a:not(.get-quote).active {
+    color: #d4a017;
+    background: rgba(212, 160, 23, 0.08);
+}
+
+
+/* Active underline */
+
+.links a:not(.get-quote).active::after {
+    width: 60%;
+}
+/* ================================
+   GET A QUOTE
+   ================================ */
+
+/* Prevent the navigation CSS from affecting it */
+
+.links a.get-quote {
+    position: static;
+    padding: initial;
+    background: none;
+    color: initial;
+    text-decoration: none;
+}
+
+/* Make sure the navigation hover doesn't affect it */
+
+.links a.get-quote:hover {
+    background: none;
+    color: initial;
+}
+
+/* Remove the navigation underline completely */
+
+.links a.get-quote::after {
+    content: none;
+}
+/* Shine when hovering */
+
+.links a.get-quote:hover::before {
+    left: 140%;
+}
+
+
+/* Remove navigation underline */
+
+.links a.get-quote::after {
+    content: none !important;
+    display: none !important;
+}
+header {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background: #fff;
+    border-bottom: 1px solid #eee
+}
+.nav {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  }
+
+.logo {
+    width: 135px;
+    height: 58px;
+    object-fit: contain
+}
+
+.links {
+    display: flex;
+    gap: 18px;
+    align-items: center
+}
+
+.links a {
+    font-weight: bold;
+    font-size: 14px
+}
+
+.btn-primary {
+    background: #f28c00 !important;
+    color: #fff !important
+}
+
+.btn-primary {
+    padding: 10px 16px;
+    border-radius: 25px
+}
+
+.btn-outline {
+    background: #292929;
+    color:white;
+    padding: 10px 16px;
+    border-radius: 25px;
+
+}
+
+.menu {
+    display: none
+}
+
+/* ========================================================= BLOG HERO ========================================================= */
+.blog-hero {
+  min-height: 470px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 80px 20px;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.67)),
+    url("images/blog-hero.jpg") center/cover no-repeat;
+}
+.blog-hero-content {
+  width: min(850px, 100%);
+  margin: auto;
+  color: #ffffff;
+}
+.blog-tag,
+.section-label {
+  display: inline-block;
+  color: #d4a017;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.blog-hero h1 {
+  margin: 15px 0;
+  font-size: clamp(38px, 6vw, 68px);
+  line-height: 1.1;
+}
+.blog-hero p {
+  max-width: 720px;
+  margin: 0 auto 30px;
+  font-size: 17px;
+  color: #eeeeee;
+}
+.hero-button,
+.main-cta,
+.article-cta {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.25s;
+}
+.hero-button {
+  padding: 13px 25px;
+  color: #111111;
+  background: #d4a017;
+  border-radius: 6px;
+}
+.hero-button:hover {
+  background: #ffffff;
+} /* ========================================================= BLOG INTRO ========================================================= */
+.blog-intro {
+  padding: 85px 20px 55px;
+  text-align: center;
+}
+.blog-container {
+  width: min(1100px, 92%);
+  margin: auto;
+}
+.blog-intro h2 {
+  max-width: 750px;
+  margin: 12px auto 18px;
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.2;
+}
+.blog-intro p {
+  max-width: 850px;
+  margin: 10px auto;
+  color: #666666;
+} /* ========================================================= ARTICLES ========================================================= */
+.extended-blog {
+  padding: 35px 20px 90px;
+}
+.blog-article {
+  display: grid;
+  grid-template-columns: 43% 57%;
+  margin-bottom: 70px;
+  overflow: hidden;
+  background: #fafafa;
+  border: 1px solid #eeeeee;
+  border-radius: 14px;
+}
+.blog-article.reverse {
+  grid-template-columns: 57% 43%;
+}
+.blog-article.reverse .article-image {
+  order: 2;
+}
+.article-image {
+  min-height: 100%;
+  overflow: hidden;
+}
+.article-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.blog-article:hover .article-image img {
+  transform: scale(1.03);
+}
+.article-content {
+  padding: 50px;
+}
+.article-category {
+  color: #b8860b;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+.article-content h2 {
+  margin: 10px 0 20px;
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.2;
+}
+.article-content h3 {
+  margin: 28px 0 8px;
+  font-size: 19px;
+}
+.article-content p {
+  margin: 0 0 14px;
+  color: #555555;
+}
+.article-cta {
+  margin-top: 18px;
+  padding: 12px 20px;
+  color: #ffffff;
+  background: #111111;
+  border-radius: 6px;
+}
+.article-cta:hover {
+  color: #111111;
+  background: #d4a017;
+} /* ========================================================= FINAL CTA ========================================================= */
+.blog-cta-section {
+  padding: 90px 20px;
+  text-align: center;
+  background: #111111;
+  color: #ffffff;
+}
+.blog-cta-section h2 {
+  max-width: 750px;
+  margin: 12px auto 18px;
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.2;
+}
+.blog-cta-section p {
+  max-width: 700px;
+  margin: auto auto 28px;
+  color: #cccccc;
+}
+.main-cta {
+  padding: 13px 28px;
+  color: #111111;
+  background: #d4a017;
+  border-radius: 6px;
+}
+.main-cta:hover {
+  background: #ffffff;
+} /* ========================================================= FOOTER ========================================================= */
+.site-footer {
+  background: #050505;
+  color: #ffffff;
+  padding-top: 65px;
+}
+.footer-container {
+  width: min(1100px, 92%);
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.3fr;
+  gap: 45px;
+  padding-bottom: 55px;
+}
+.footer-brand img {
+  width: 150px;
+  background: #ffffff;
+  padding: 5px;
+  border-radius: 4px;
+}
+.footer-brand p {
+  max-width: 260px;
+  color: #aaaaaa;
+}
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.footer-column h3 {
+  margin: 0 0 12px;
+  color: #d4a017;
+  font-size: 16px;
+}
+.footer-column a {
+  color: #bbbbbb;
+  text-decoration: none;
+  transition: 0.2s;
+}
+.footer-column a:hover {
+  color: #d4a017;
+}
+.footer-column p {
+  margin: 0;
+  color: #bbbbbb;
+} /* ========================================================= FOOTER BOTTOM ========================================================= */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: min(1100px, 92%);
+  margin: auto;
+  padding: 22px 0;
+  border-top: 1px solid #222222;
+  color: #777777;
+  font-size: 13px;
+}
+.footer-bottom p {
+  margin: 0;
+} /* ========================================================= TABLET ========================================================= */
+@media (max-width: 1000px) {
+  .links a {
+    padding: 9px 8px;
+    font-size: 13px;
+  }
+  .blog-article,
+  .blog-article.reverse {
+    grid-template-columns: 1fr;
+  }
+  .blog-article.reverse .article-image {
+    order: 0;
+  }
+  .article-image img {
+    min-height: 400px;
+    max-height: 500px;
+  }
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+  }
+} /* ========================================================= MOBILE ========================================================= */
+@media (max-width: 800px) {
+  .nav {
+    min-height: 68px;
+  }
+  .logo {
+    width: 120px;
+  }
+  .menu {
+    display: block;
+  }
+  .links {
+    position: absolute;
+    top: 68px;
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px;
+    background: #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  }
+  .links.show {
+    display: flex;
+  }
+  .links a {
+    padding: 13px 15px;
+    font-size: 15px;
+  }
+  .links .cta {
+    margin: 5px 0 0;
+    text-align: center;
+  }
+  .blog-hero {
+    min-height: 430px;
+    padding: 60px 18px;
+  }
+  .article-content {
+    padding: 30px 23px;
+  }
+  .article-image img {
+    min-height: 280px;
+    max-height: 360px;
+  }
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+} /* ========================================================= SMALL PHONES ========================================================= */
+@media (max-width: 480px) {
+  .blog-hero h1 {
+    font-size: 38px;
+  }
+  .blog-hero p {
+    font-size: 15px;
+  }
+  .blog-intro {
+    padding-top: 60px;
+  }
+  .extended-blog {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .article-content {
+    padding: 25px 18px;
+  }
+  .article-content h2 {
+    font-size: 27px;
+  }
+  .article-content h3 {
+    font-size: 18px;
+  }
+  .article-image img {
+    min-height: 230px;
+    max-height: 300px;
+  }
+/* ========================================================= Socials ========================================================= */
+}
+  .social {
+    background: #fff0da
+}
+
+.socialrow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px
+}
+
+.socials {
+    display: flex;
+    gap: 10px
+}
+
+.socials a {
+    background: #171717;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 22px;
+    font-weight: bold
+}
+/* ========================================================= FOOTER ========================================================= */
+footer {
+    background: #111;
+    color: #fff;
+    padding: 50px 0 20px
+}
+
+.foot {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 30px
+}
+
+.foot a {
+    display: block;
+    color: #aaa;
+    margin: 6px 0
+}
+.copyright {
+    border-top: 1px solid #292929;
+    margin-top: 30px;
+    padding-top: 15px;
+    color: #777;
+    font-size: 12px
+}
+
+.float {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    background: #1db954;
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 28px;
+    font-weight: bold;
+    z-index: 9
+}
+.copyright {
+    border-top: 1px solid #292929;
+    margin-top: 30px;
+    padding-top: 15px;
+    color: #777;
+    font-size: 12px
+}
+
+.float {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    background: #1db954;
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 28px;
+    font-weight: bold;
+    z-index: 9
+}
+
+@media(max-width:800px) {
+    .links {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 4%;
+        right: 4%;
+        background: #fff;
+        padding: 18px;
+        flex-direction: column;
+        align-items: stretch
+    }
+
+    .links.open {
+        display: flex
+    }
+   .menu {
+        display: block;
+        border: 0;
+        background: none;
+        font-size: 25px
+    }
+
+    .grid {
+        grid-template-columns: 1fr
+    }
+
+    .cards,
+    .products,
+    .steps,
+    .gallery,
+    .foot {
+        grid-template-columns: 1fr 1fr
+    }
+
+    .form {
+        grid-template-columns: 1fr
+        }
+
+    .full {
+        grid-column: auto
+    }
+
+    .socialrow {
+        flex-direction: column;
+        align-items: flex-start
+    }
+}
+
+@media(max-width:520px) {
+
+    .cards,
+    .products,
+    .steps,
+    .gallery,
+    .foot {
+        grid-template-columns: 1fr
+    }
+}
