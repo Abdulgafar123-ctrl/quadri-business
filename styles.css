@@ -1033,6 +1033,167 @@ section {
         margin-right: auto;
     }
 }
+/* ================= TEAM SECTION ================= */
+
+.team-section {
+    position: relative;
+    padding: 100px 20px;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.team-container {
+    width: min(1200px, 100%);
+    margin: 0 auto;
+}
+
+.team-heading {
+    max-width: 750px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.team-subtitle {
+    display: inline-block;
+    margin-bottom: 12px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #c99a16;
+}
+
+.team-heading h2 {
+    margin: 0 0 18px;
+    font-size: clamp(32px, 5vw, 48px);
+    line-height: 1.15;
+    color: #111111;
+}
+
+.team-heading h2 span {
+    color: #c99a16;
+}
+
+.team-heading p {
+    margin: 0;
+    color: #666666;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* TEAM GRID */
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+
+/* TEAM CARD */
+
+.team-card {
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+
+/* TEAM IMAGE */
+
+.team-image {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+.team-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.team-card:hover .team-image img {
+    transform: scale(1.06);
+}
+
+
+/* TEAM INFORMATION */
+
+.team-info {
+    padding: 25px 22px 28px;
+    text-align: center;
+}
+
+.team-info h3 {
+    margin: 0 0 8px;
+    color: #111111;
+    font-size: 19px;
+    line-height: 1.4;
+}
+
+.team-position {
+    display: block;
+    margin-bottom: 15px;
+    color: #c99a16;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+}
+
+.team-info p {
+    margin: 0;
+    color: #666666;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1000px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .team-image {
+        height: 320px;
+    }
+}
+
+@media (max-width: 600px) {
+    .team-section {
+        padding: 70px 16px;
+    }
+
+    .team-heading {
+        margin-bottom: 40px;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .team-image {
+        height: 360px;
+    }
+
+    .team-info {
+        padding: 22px 20px 25px;
+    }
+}
 /* =========================
    GLIMPAXE WORKSPACE
 ========================= */
